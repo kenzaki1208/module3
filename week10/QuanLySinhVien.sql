@@ -84,3 +84,28 @@ from student S join mark M on S.StudentId = M.StudentId join subject Sub on M.Su
 select S.StudentId, S.StudentName, Sub.SubName, M.Mark
 from student S join mark M on S.StudentId = M.StudentId join subject Sub on M.SubId = Sub.SubId
 where Sub.SubName = 'CF';
+
+#yêu cầu 1:
+select * from student
+where StudentName like 'h%';
+
+#yêu cầu 2:
+select * from class
+where month(StartDate) = 12;
+
+#yêu cầu 3:
+select * from subject
+where Credit between 3 and 5;
+
+#yêu cầu 4:
+select StudentId from student where StudentName = 'Hung';
+update student
+set ClassId = 2
+where StudentId = 1;
+
+#yêu cầu 5:
+select S.StudentName, Sub.SubName, M.Mark
+from student S
+join mark M on S.StudentId = M.StudentId
+join subject Sub on M.SubId = Sub.SubId
+order by M.Mark desc, S.StudentName asc;
