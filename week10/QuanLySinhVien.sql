@@ -64,3 +64,23 @@ select * from class;
 select * from student;
 select * from subject;
 select * from mark;
+
+select * from student
+where Status = true;
+
+select * from subject
+where Credit < 10;
+
+select S.StudentId, S.StudentName, C.ClassName
+from student S join class C on S.StudentId = C.ClassId; 
+
+select S.StudentId, S.StudentName, C.ClassName
+from student S join class C on S.StudentId = C.ClassId
+where C.ClassName = 'A1'; 
+
+select S.StudentId, S.StudentName, Sub.SubName, M.Mark
+from student S join mark M on S.StudentId = M.StudentId join subject Sub on M.SubId = Sub.SubId;
+
+select S.StudentId, S.StudentName, Sub.SubName, M.Mark
+from student S join mark M on S.StudentId = M.StudentId join subject Sub on M.SubId = Sub.SubId
+where Sub.SubName = 'CF';
