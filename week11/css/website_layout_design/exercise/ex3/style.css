@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 10px;
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+}
+
+header nav a:hover {
+    color: #ccc;
+}
+
+header .Login {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    /*flex: 1 1 150px;*/
+    flex: 1;
+    background-color: #f1f1f1;
+    padding: 5px;
+}
+
+.left a {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+}
+
+.left a:hover {
+    color: blue;
+}
+
+main {
+    flex: 4 1 400px;
+    height: 84vh;
+    padding: 20px;
+}
+
+.right {
+    /*flex: 1 1 150px;*/
+    flex: 1;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.ads {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        order: 1;
+    }
+
+    main {
+        order: 2;
+    }
+}
